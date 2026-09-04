@@ -1,0 +1,36 @@
+# Git
+.git
+.gitignore
+
+# Dependencies (reinstalled in the build stage; host copies may hold
+# platform-specific binaries that break inside the container)
+node_modules
+
+# Build output (regenerated in the build stage)
+dist
+dist-ssr
+*.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Docker (avoid recursive context)
+Dockerfile*
+.dockerignore
+docker-compose*.yml
+
+# Docs
+README.md
