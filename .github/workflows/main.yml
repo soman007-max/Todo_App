@@ -10,9 +10,9 @@ permissions:
   contents: read
 
 env:
-  ACR_NAME: mycompanyacr
-  ACR_LOGIN_SERVER: mycompanyacr.azurecr.io
-  IMAGE_NAME: myapp
+  ACR_NAME: Somtodoacr
+  ACR_LOGIN_SERVER: somtodoacr.azurecr.io
+  IMAGE_NAME: todo-app
 
 jobs:
   build-and-push:
@@ -27,9 +27,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: "2763f7b2-eaf9-4ef4-8935-ee21538622d2"
+          tenant-id: "9c0e74bf-63ad-4d83-802c-30dfa888859a"
+          subscription-id: "9435f968-f680-4062-9594-8bb4396ee93c"
 
       - name: Login to Azure Container Registry
         run: az acr login --name ${{ env.ACR_NAME }}
